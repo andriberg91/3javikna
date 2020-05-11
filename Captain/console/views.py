@@ -1,9 +1,5 @@
 from django.shortcuts import render
+from console.models import Console
 
-consoles = [
-    {'name': 'Playstation 4', 'price': 200},
-    {'name': 'Xbox', 'price': 250}
-]
-# Create your views here.
 def index(request):
-    return render(request, 'console/index.html', context={ 'consoles': consoles })
+    return render(request, 'console/index.html', context={ 'consoles': Console.objects.all().order_by('name') })
