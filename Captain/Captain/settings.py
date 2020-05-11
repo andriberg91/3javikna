@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'aoyvuvec',
         'USER': 'aoyvuvec',
-        'PASSWORD':'yqUq2_ZqMNPt64CGw-QCpX00BmnDcy6B',
+        'PASSWORD':'8b2j8tDBMMebteg95aJ0iscP6Xzfv_0z',
         'HOST': 'kandula.db.elephantsql.com',
         'PORT': '5432'
     }
