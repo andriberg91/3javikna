@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="console">
+        <h2>Welcome to the console app</h2>
+    </div>
+    {% for console in consoles %}
+        {% if console.price > 200 %}
+            <p>Svolítið dýrt!</p>
+            {% else %}
+            <p>Sjúklega ódýrt maður</p>
+        {% endif %}
+        <h4>{{ console.name }}</h4>
+        <p>{{ console.price }}kr</p>
+    {% endfor %}
+{% endblock %}
