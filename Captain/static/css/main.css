@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: -1000px;
     right: 0;
     left: 0;
-    background-image: linear-gradient(to right, lightgrey, darkgray);
+    background-image: linear-gradient(to right, blue, yellow, green, red);
     animation: animate-navbar 3s linear infinite alternate;
 }
 
@@ -88,7 +88,7 @@ a:hover {
 }
 
 .consoles .console:hover {
-    background-image: linear-gradient(lightgrey, darkgray), linear-gradient(#6564FF, #2A96FA);
+    background-image: linear-gradient(lightskyblue, greenyellow), linear-gradient(blueviolet, red);
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom, left bottom;
     background-size: 0 3px, 3px 0, 0 3px, 3px 0;
@@ -139,7 +139,7 @@ a:hover {
 }
 
 .console {
-    background-color: lightgray;
+    background-color: lightgrey;
     border: solid 4px rgba(155, 155, 155, .5);
 ;
 }

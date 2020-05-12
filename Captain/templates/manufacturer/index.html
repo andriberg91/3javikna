@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h2>Welcome to the manufacturer app</h2>
+    <h3>Manufacturers</h3>
+    <div class="manufacturers">
+        {% for manufacturer in manufacturers %}
+            {% include 'manufacturer/single_manufacturer.html' with manufacturer=manufacturer %}
+        {% endfor %}
+    </div>
 {% endblock %}
