@@ -7,6 +7,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+
 .navbar {
     position: relative;
     overflow: hidden;
@@ -75,6 +76,11 @@ a:hover {
 }
 
 .console a {
+    color: black !important;
+    text-decoration: none;
+}
+
+.manufacturer a {
     color: black !important;
     text-decoration: none;
 }

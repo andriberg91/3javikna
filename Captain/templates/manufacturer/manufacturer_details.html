@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h1>{{ manufacturer.name }}</h1>
+    <p>{{ manufacturer.description }}</p>
+    {% for manufacturer_image in manufacturer.manufacturerimage_set.all %}
+        <img src="{{ manufacturer_image.image }}" class="manufacturer-img"/>
+    {% endfor %}
+
+{% endblock %}
