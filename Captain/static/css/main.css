@@ -86,8 +86,8 @@ a:hover {
 }
 
 .consoles .console{
-    border-radius: 0;
-    margin: 0;
+    border-radius: 2px;
+    margin: 2px;
     background-image: none;
     background-color: lightgrey;
     text-align: center;
@@ -96,9 +96,9 @@ a:hover {
 .consoles .console:hover {
     background-image: linear-gradient(lightskyblue, greenyellow), linear-gradient(blueviolet, red);
     background-repeat: no-repeat;
-    background-position: left top, right top, right bottom, left bottom;
+    background-position: left top, right top, right bottom;
     background-size: 0 3px, 3px 0, 0 3px, 3px 0;
-    animation: circle-around .5s ease-in both;
+    animation: circle-around 5s ease-in both;
     cursor: pointer;
 }
 
@@ -107,8 +107,8 @@ a:hover {
 }
 
 .console-img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 180px;
     transition: transform 1s ease-in;
 }
 
@@ -147,6 +147,17 @@ a:hover {
 
 .console {
     background-color: lightgrey;
-    border: solid 4px rgba(155, 155, 155, .5);
+    border: solid 0.1px rgba(155, 155, 155, .5);
+    border-color: black;
 ;
+}
+
+.testing {
+    position: absolute;
+    top: -1000px;
+    bottom: -1000px;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to right, lightgrey, gray, lightpink, lightsalmon);
+    animation: animate-navbar 3s linear infinite alternate;
 }
