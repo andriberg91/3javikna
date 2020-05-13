@@ -5,6 +5,8 @@ from manufacturer.models import Manufacturer
 
 class ConsoleType(models.Model):
     name = models.CharField(max_length=255)
+    def __str__(self):
+        return self.name
 
 class Console(models.Model):
     name = models.CharField(max_length=255)

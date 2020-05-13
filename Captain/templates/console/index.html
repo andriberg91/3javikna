@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h3 class="red">Hello from the index function within the candy app</h3>
+
+    <h3 class="red">Products</h3>
+    <div class="input-group">
+        <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.."/>
+        <div class="input-group-btn">
+            <button type="button" id="search-btn" class="btn btn-default">Leita</button>
+        </div>
+    </div>
+
+
         <div class = "consoles">
             {% for console in consoles %}
         {% include 'console/single_console.html' with console=console %}
