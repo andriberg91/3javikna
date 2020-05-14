@@ -1,8 +1,8 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, get_list_or_404
 from django.http import JsonResponse
 from console.forms.console_form import ConsoleCreateForm
 from console.forms.console_form import ConsoleUpdateForm
-from console.models import Console, ConsoleImage
+from console.models import Console, ConsoleImage, ConsoleType
 
 def index(request):
     if 'search_filter' in request.GET:
@@ -21,10 +21,13 @@ def index(request):
 # /consoles/3
 
 def get_console_by_id(request, id):
-    return render(request, 'console/console_details.html', {
-        'console': get_object_or_404(Console, pk=id)
+        return render(request, 'console/console_details.html', {
+            'console': get_object_or_404(Console, pk=id)
+        })
+def get_console_by_type(request, type_id):
+    return render(request, 'console/console_type.html', {
+        'console': get_object_or_404(Console, type_id=type_id)
     })
-
 def create_console(request):
     if request.method == 'POST':
         form = ConsoleCreateForm(data=request.POST)
