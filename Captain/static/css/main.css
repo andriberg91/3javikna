@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'AppleGothic';
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway';
@@ -31,7 +31,6 @@ a {
 }
 
 a:hover {
-    background-image: linear-gradient(white, lightgrey);
 }
 
 @keyframes line-under {
@@ -76,6 +75,7 @@ a:hover {
 }
 
 .console a {
+    font-family: AppleGothic;
     color: black !important;
     text-decoration: none;
 }
@@ -89,7 +89,6 @@ a:hover {
     border-radius: 2px;
     margin: 2px;
     background-image: none;
-    background-color: lightgrey;
     text-align: center;
 }
 
@@ -98,7 +97,7 @@ a:hover {
     background-repeat: no-repeat;
     background-position: left top, right top, right bottom;
     background-size: 0 3px, 3px 0, 0 3px, 3px 0;
-    animation: circle-around 5s ease-in both;
+    animation: circle-around 0.1s ease-in both;
     cursor: pointer;
 }
 
@@ -108,7 +107,7 @@ a:hover {
 
 .console-img {
     width: 220px;
-    height: 180px;
+    height: 300px;
     transition: transform 1s ease-in;
 }
 
