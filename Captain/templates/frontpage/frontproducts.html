@@ -1,0 +1,7 @@
+<div class="well console">
+    <a href="/consoles/{{ product.id }}">
+        <img class="console-img" src="{{ product.consoleimage_set.first.image }}"/>
+        <h4>{{ product.name }}</h4>
+        <p>{{ product.description }}</p>
+    </a>
+</div>

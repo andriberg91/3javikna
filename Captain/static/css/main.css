@@ -70,6 +70,7 @@ a:hover {
 }
 
 .consoles {
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -107,7 +108,7 @@ a:hover {
 
 .console-img {
     width: 220px;
-    height: 300px;
+    height: 290px;
     transition: transform 1s ease-in;
 }
 

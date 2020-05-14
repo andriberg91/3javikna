@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="consoles">
+    {% for product in products %}
+        {% if product.pk < 12 %}
+            {% include 'frontpage/frontproducts.html' with console=console %}
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}
