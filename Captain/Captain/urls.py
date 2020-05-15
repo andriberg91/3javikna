@@ -24,6 +24,7 @@ urlpatterns = [
     path('consoles/', include('console.urls')),
     path('manufacturers/', include('manufacturer.urls')),
     path('user/', include('user.urls')),
-    path('frontpage/', include('frontpage.urls'))
+    path('frontpage/', include('frontpage.urls')),
+    path('cart/', include('cart.urls')),
 
 ]

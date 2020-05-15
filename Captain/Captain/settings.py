@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'console.apps.ConsoleConfig',
     'manufacturer.apps.ManufacturerConfig',
     'user.apps.UserConfig',
-    'frontpage.apps.FrontpageConfig'
+    'frontpage.apps.FrontpageConfig',
+    'cart.apps.CartConfig',
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,4 @@ STATICFILES_DIRS = [
 
 LOGIN_URL = 'user/login'
 LOGIN_REDIRECT_URL = '/user/profile'
+
