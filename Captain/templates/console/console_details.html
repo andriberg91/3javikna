@@ -3,13 +3,13 @@
 
     <h1>{{ console.name }}</h1>
     <p>{{ console.detailed_description }}</p>
-    <p>{{ console.price }}</p>
+    <p>{{ console.price }}$</p>
     <p>Manufacturer: {{ console.manufacturer.name }} </p>
     {% for console_image in console.consoleimage_set.all %}
         <img src="{{ console_image.image }}" class="console-img"/>
     {% endfor %}
     <a href="{% url 'delete_console' console.id %}" class="block btn btn-primary">Delete Console</a>
     <a href="{% url 'update_console' console.id %}" class="block btn btn-primary">Update Console</a>
-    <a href="{% url 'add_cart' console.id %}" class="block btn btn-primary">Bæta við körfu</a>
+    <a href="{% url 'add_to_cart' console.id %}" class="block btn btn-primary">Bæta við körfu</a>
 
 {% endblock %}

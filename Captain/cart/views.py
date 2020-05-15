@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from cart.models import Cart
+from console.models import Console
 
 # Create your views here.
 def index(request):
-    context = {'cart': Cart.objects.all().order_by('name')}
+    context = {'cart': Console.objects.all().order_by('name')}
     return render(request, 'cart/cart.html', context)
 
 

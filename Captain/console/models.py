@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import reverse
 
 from manufacturer.models import Manufacturer
 
@@ -17,6 +18,12 @@ class Console(models.Model):
     detailed_description = models.CharField(max_length=3999, blank=True)
     def __str__(self):
         return self.name
+
+    def get_add_to_cart_url(self):
+        return reverse("core:console", kwargs={
+            'id': self.id
+        })
+
 
 
 class ConsoleImage(models.Model):
