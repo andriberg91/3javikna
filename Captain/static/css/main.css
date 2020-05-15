@@ -161,3 +161,29 @@ a:hover {
     background-image: linear-gradient(to right, lightgrey, gray, lightpink, lightsalmon);
     animation: animate-navbar 3s linear infinite alternate;
 }
+
+.collection-filter__toolbar-controls__button {
+    border: 1px solid grey;
+    border-radius: 3px;
+    color: grey;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 12px;
+    text-transform: uppercase;
+    float: left;
+}
+
+.collection-filter__sort-select-filter {
+    -webkit-appearance: menulist-button;
+    -moz-appearance: menulist-button;
+    -ms-appearance: menulist-button;
+    -o-appearance: menulist-button;
+    appearance: menulist-button;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 62px;
+    opacity: .001;
+    height: 42px;
+}

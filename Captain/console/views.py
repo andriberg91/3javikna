@@ -12,9 +12,21 @@ def index(request):
             'id': x.id,
             'name': x.name,
             'description': x.description,
-            'firstImage': x.consoleimage_set.first().image
+            'firstImage': x.consoleimage_set.first().image,
+            'price': x.price
         } for x in Console.objects.filter(name__icontains=search_filter) ]
         return JsonResponse({ 'data': consoles })
+    if 'sort_by' in request.GET:
+        sort_by = request.GET['sort_by']
+        consoles = [{
+            'id': x.id,
+            'name': x.name,
+            'description': x.description,
+            'firstImage': x.consoleimage_set.first().image,
+            'price': x.price
+        } for x in Console.objects.filter(name__icontains=sort_by)]
+        return JsonResponse({'data': consoles})
+
 
     context = {'consoles': Console.objects.all().order_by('name')}
     return render(request, 'console/index.html', context)

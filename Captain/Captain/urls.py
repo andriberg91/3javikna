@@ -26,5 +26,6 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('frontpage/', include('frontpage.urls')),
     path('cart/', include('cart.urls')),
+    path('leita/', include('leita.urls'))
 
 ]

@@ -5,6 +5,7 @@
         <img class="console-img" src="{{ console.consoleimage_set.first.image }}"/>
         <h4>{{ console.name }}</h4>
         <p>{{ console.description }}</p>
+        <p>{{ console.price }}</p>
     </a>
     <a href="{% url 'cart-index:order' %}" class="btn btn-warning">Setja í körfu</a>
 </div>
