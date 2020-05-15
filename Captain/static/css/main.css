@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'AppleGothic';
+    font-family: 'Avenir';
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Raleway';
@@ -76,7 +76,7 @@ a:hover {
 }
 
 .console a {
-    font-family: AppleGothic;
+    font-family: Avenir;
     color: black !important;
     text-decoration: none;
 }
