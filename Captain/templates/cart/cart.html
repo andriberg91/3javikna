@@ -1,6 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h3>Karfa 123</h3>
+    <h3>Karfa</h3>
+    <div class="customerinfo">
+        <div class="input_type">
+            <input type="text" name="fullname" id="fullname" placeholder="Nafn">
+            <label for="fullname" class="required">Nafn</label>
+        </div>
+        <div class="input_type">
+            <input type="text" name="streetname" id="streetname" placeholder="Heimilisfang">
+            <label for="streetname" class="required">Heimilisfang</label>
+        </div>
+        <div class="input_type">
+            <input type="text" name="city" id="city" placeholder="Staður">
+            <label for="city" class="required">Staður</label>
+        </div>
+        <div class="input_type">
+            <input type="number" name="postcode" id="postcode" placeholder="Póstnúmer">
+            <label for="postcode" class="required">Póstnúmer</label>
+        </div>
+    </div>
 
 {% endblock %}

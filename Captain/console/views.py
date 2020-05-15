@@ -6,6 +6,7 @@ from console.forms.console_form import ConsoleUpdateForm
 from console.models import Console, ConsoleImage, ConsoleType
 from django.contrib import messages
 
+
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET['search_filter']
@@ -81,4 +82,4 @@ def add_cart(request, id):
     console = get_object_or_404(Console, pk=id)
 
     messages.success(request, "Vara færð í körfu")
-    return redirect('console_details', id=id)
+    return render(request, 'cart/cart.html')
