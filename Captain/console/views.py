@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect, get_list_or_404
 from django.http import JsonResponse
 from console.forms.console_form import ConsoleCreateForm
@@ -54,12 +55,13 @@ def create_console(request):
     return render(request, 'console/create_console.html', {
         'form': form
     })
-
+@login_required()
 def delete_console(request, id):
     console = get_object_or_404(Console, pk=id)
     console.delete()
     return redirect('console-index')
 
+@login_required()
 def update_console(request, id):
     instance = get_object_or_404(Console, pk=id)
     if request.method == 'POST':
