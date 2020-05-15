@@ -9,5 +9,5 @@ urlpatterns = [
     path('create_console', views.create_console, name="create_console"),
     path('delete_console/<int:id>', views.delete_console, name="delete_console"),
     path('update_console/<int:id>', views.update_console, name="update_console"),
-    path('add_cart/<int:id>', views.index, name='add_cart')
+    path('add_cart/<int:id>', views.add_cart, name='add_cart')
 ]
