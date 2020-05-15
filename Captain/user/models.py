@@ -4,3 +4,4 @@ from django.db import models
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = models.CharField(max_length=9999)
+    user_name = models.CharField(max_length=999, default='')

@@ -16,7 +16,15 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
+=======
+<<<<<<< HEAD
+    <orderEntry type="jdk" jdkName="Python 3.8 (Captain)" jdkType="Python SDK" />
+=======
+    <orderEntry type="inheritedJdk" />
+>>>>>>> 4ed91fc36b8bfbaa701e809be792ae5ecc6a75a1
+>>>>>>> b7e8da6f20c42acb5b09a11e6ab4cc10d0e6befc
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
