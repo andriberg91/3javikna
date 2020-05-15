@@ -1,9 +1,14 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, redirect, get_list_or_404
 from django.http import JsonResponse
+from django.views.generic import ListView, DetailView, View
+from django.utils import timezone
+from django.core.exceptions import ObjectDoesNotExist
 from console.forms.console_form import ConsoleCreateForm
 from console.forms.console_form import ConsoleUpdateForm
 from console.models import Console, ConsoleImage, ConsoleType
+from cart.models import CartItem, Order
 from django.contrib import messages
 
 
@@ -77,9 +82,56 @@ def update_console(request, id):
         'id': id
     })
 
+class OrderSummaryView(View):
+    def get(self, *args, **kwargs):
+        try:
+            order = Order.objects.get(user=self.request.user, ordered=False)
+            context = {
+                'object': order
+            }
+            return render(self.request, 'cart/cart.html', context)
+        except ObjectDoesNotExist:
+            messages.error(self.request, "There is nothing in basket" )
+            return redirect("/")
 
-def add_cart(request, id):
-    console = get_object_or_404(Console, pk=id)
 
+def add_to_cart(request, id):
+    product = get_object_or_404(Console, pk=id)
+    order_item, created = CartItem.objects.get_or_create(product=product, user=request.user, ordered=False)
+    order_qs = Order.objects.filter(user=request.user, ordered=False)
+    if order_qs.exists():
+        order = order_qs[0]
+        #check if order item is in the order
+        if order.products.filter(product__name=product.name).exists():
+            order_item.quantity +=1
+            order_item.save()
+            messages.info(request, "Magn var uppfært")
+        else:
+            messages.info(request, "Vara var sett í körfu")
+            order.products.add(order_item)
+    else:
+        ordered_date = timezone.now()
+        order = Order.objects.create(user=request.user, ordered_date=ordered_date)
+        order.products.add(order_item)
     messages.success(request, "Vara færð í körfu")
-    return render(request, 'cart/cart.html')
+    return redirect('console-index')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

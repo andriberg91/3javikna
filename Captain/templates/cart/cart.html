@@ -1,6 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
 
+    <h2>Yfirlit Körfu</h2>
+    <table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nafn</th>
+      <th scope="col">Verð</th>
+      <th scope="col">Magn</th>
+      <th scope="col">Samtals</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+        {% for product_item in object.products %}
+      <td>{{ product_item.object.name }}</td>
+      <td>{{ product_item.object.price }}</td>
+      <td>?</td>
+      <td>???</td>
+        {% endfor %}
+    </tr>
+  </tbody>
+</table>
+
     <h3>Karfa</h3>
     <div class="customerinfo">
         <div class="input_type">
